@@ -1,0 +1,30 @@
+{
+  "name": "cocobo1-website",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "lint": "bun run eslint ./src --fix"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/parser": "^8.59.4",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.4.0",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "globals": "^17.6.0"
+  },
+  "peerDependencies": {
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  }
+}
